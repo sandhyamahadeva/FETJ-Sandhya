@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <label for="lines">Number of Lines (1-100): </label>
+    <input type="number" id="lines" min="1" max="100">
+    <button onclick="displayDiamond()">Display</button>
+  
+    <div id="output" class="diamond"></div>
+  
+    <script>
+        function displayDiamond() {
+            var i,j;
+            var space;
+            var arr = ["F","O","R","M","U","L","A","Q","S","O","L","U","T","I","O","N","S"]
+            // var str1 = str.split('')
+            for(i =0 ; i<=arr.length  ; i++){
+                for(space = 1; space <= 30-i;space++){
+                    document.write("&nbsp;&nbsp;")
+                }
+                for(j = 0; j<i;j++){
+                    document.write(arr[j]+"&nbsp;&nbsp;")
+                }
+                document.write("<br>")
+            }
+            //   for( i = 1;i<=(arr.length)-1;i++){
+            //     for(space=1;space<=12+i;space++){
+            //         document.write("&nbsp;&nbsp;")
+            //     }
+            //     for(j=1;j<=arr.length-i;j++){
+            //         document.write(arr[j]+"&nbsp;&nbsp;")
+            //     }
+            //     document.write("<br>")
+            //   }
+            // for(i =0 ; i<=arr.length -1  ; i++){
+            //     for(j = 1; j<i;j++){
+            //         document.write(arr[j]+"&nbsp;&nbsp;")
+            //     }
+            //     for(space = 1; space <=25+i; space++){
+            //         document.write("&nbsp;&nbsp;")
+            //     }
+                
+            //     document.write("<br>")
+            // }
+
+        }
+    //   function displayDiamond() {
+    //     var lines = document.getElementById("lines").value;
+    //     var output = document.getElementById("output");
+  
+    //     // Clear previous output
+    //     output.innerHTML = "";
+  
+    //     // Check if the input is valid
+    //     if (lines < 1 || lines > 100) {
+    //       output.innerText = "Invalid input. Please enter a number between 1 and 100.";
+    //       return;
+    //     }
+  
+    //     var diamond = "";
+    //     var middle = Math.ceil(lines / 2);
+  
+    //     // Top half of the diamond
+    //     for (var i = 1; i <= middle; i++) {
+    //       diamond += " ".repeat(middle - i);
+    //       diamond += "FORMULAQSOLUTIONS".substr(i - 1, (2 * i) - 1);
+    //       diamond += "\n";
+    //     }
+  
+    //     // Bottom half of the diamond
+    //     for (var i = middle - 1; i >= 1; i--) {
+    //       diamond += " ".repeat(middle - i);
+    //       diamond += "FORMULAQSOLUTIONS".substr(i - 1, (2 * i) - 1);
+    //       diamond += "\n";
+    //     }
+  
+    //     output.innerText = diamond;
+    //   }
+    </script>
+
+
+</body>
+</html>
